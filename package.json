@@ -4,7 +4,9 @@
   "description": "Globalize.js webpack plugin",
   "main": "index.js",
   "scripts": {
-    "test": "eslint *js"
+    "test": "mocha test",
+    "lint": "eslint *js",
+    "pretest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -37,8 +39,16 @@
     "webpack": "^2.2.0-rc"
   },
   "devDependencies": {
+    "chai": "^4.0.0",
+    "chai-as-promised": "^6.0.0",
+    "cldr-data": "^31.0.2",
     "eslint": "^3.19.0",
     "eslint-config-defaults": "^9.0.0",
-    "eslint-plugin-sort-requires": "^2.1.0"
+    "eslint-plugin-sort-requires": "^2.1.0",
+    "globalize": "^1.2.3",
+    "mocha": "^3.4.2",
+    "react": "^15.5.4",
+    "react-globalize": "^0.4.1",
+    "webpack": "^2.6.1"
   }
 }
