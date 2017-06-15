@@ -1,6 +1,6 @@
 {
   "name": "react-globalize-webpack-plugin",
-  "version": "1.0.1-jbellenger-beta2",
+  "version": "1.0.1",
   "description": "Globalize.js webpack plugin",
   "main": "index.js",
   "scripts": {
