@@ -111,16 +111,10 @@ class ProductionModePlugin {
       if (defaultMessages) {
         originalMessages = attributes.messages;
 
-        if (locale === developmentLocale) {
-          // Overwrite it with the extracted default messages.
-          attributes.messages = jsonKeyValue(locale, defaultMessages);
-        } else {
-          // Populate the missing messages with the default messages.
-          attributes.messages = merge(
-            jsonKeyValue(locale, defaultMessages),
-            attributes.messages || {}
-          );
-        }
+        attributes.messages = merge(
+          jsonKeyValue(locale, defaultMessages),
+          attributes.messages || {}
+        );
 
         // Write messages if:
         // 1: `writeMessages` is true, and
